@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by -
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>JP Panonce's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../../index.html" class="logo">PROGRAMS & APPS</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../../index.html">OVERVIEW</a></li>
+							<li class="active"><a href="all.html">PROGRAMS & APPS</a></li>
+							<li><a href="../spreadsheets/all.html">SPREADSHEETS</a></li>
+							<li><a href="../ui_designs/all.html">UI DESIGNS</a></li>
+							<li><a href="../data/all.html">DATA</a></li>
+							<li><a href="../others/all.html">OTHERS</a></li>
+						</ul>
+						<ul class="icons">
+							
+							
+							<li><a href="https://github.com/jpasensi" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<section class="post">
+							<header class="major">	
+								<span class="date">January 28, 2024</span>
+								<h1>Guess the RGB</h1>
+								<p>An entry for the "One HTML Page Challenge", this game tests your ability to identify the RGB of a color.</p>
+								<b><a href="https://jp-panonce.github.io/OnePageHTMLs/guessTheRGB.html">Play in Browser</a></b>
+							</header>
+							<div class="image main"><img src="../../images/guessTheRGB.png" alt="" /></div>
+							
+
+							
+                            <h2>Technical Summary</h2>
+                            <ul>
+								<li><b>Type:</b> Web Application, Game</li>
+                                <li><b>Languages:</b> HTML, CSS, JavaScript</li>
+                                <li><b>Link:</b> <a href="https://jp-panonce.github.io/OnePageHTMLs/guessTheRGB.html">https://jp-panonce.github.io/OnePageHTMLs/guessTheRGB.html</a></li>
+                            </ul>
+
+                            <h2>Overview</h2>
+							<h3>Introduction</h3>
+							<p>This game is my first entry for the <a href="https://onehtmlpagechallenge.com/">One HTML Page Challenge</a> which is a challenge for Front-end web developers to create something interesting with only one HTML page and with a set maximum HTML file size.</p>
+							<p>It is a guessing game to test the player's ability to guess the RGB values of a color (set as the background color of the page).</p>
+							
+
+                            <h2>How to play the game</h2>
+
+                            <p>To play the game, visit <a href="https://jp-panonce.github.io/OnePageHTMLs/guessTheRGB.html">this URL</a>. Once in, a new game starts. The player has to guess the RGB color of the site's background color by entering the guessed R,G,B values to each respective input fields. To submit the guess, the player would have to press on the 'Enter' key on their keyboard. The score updates based on correctness of the guess and immediately starts the next round.</p>
+							<p>Each new game consists of 10 rounds of guessing after which, will display the player's total score and a button to start a new game. The score per round is computed as follows:</p>
+							<pre><code>scorePerRound = ∑(X - Ax, x = {R, G, B}) </code></pre>
+							<p>where:
+							<ul>
+								 <li><b>X</b> = R/G/B value of player guess</li>
+								 <li><b>A<sub>x</sub></b> = R/G/B value of correct answer</li>
+							</ul>
+							</p>
+                            
+							<h2>Implementation</h2>
+
+							<h3>HTML & CSS</h3>
+							<p>The game has a simple and straightforward interface. The game page shows the title, current score and rounds played. Below which has 3 input fields for the player to enter his/her guess.</p>
+
+							<h3>JavaScript</h3>
+							<p>When the page is refreshed, a new game immediately starts. The R, G and B values of background color is determined randomly using this function: <code>Math.random(0,255)</code>. The user then enters his/her answer and upon pressing the "Enter" key, will trigger an EventListener function. Said function gets the RGB values entered by user and compares it to the RGB values of the background color.</p>
+							<p>The score is then updated by adding the round score determined using the formula already mentioned. A counter variable to check # of rounds played is also updated.</p>
+							<p>Once a total of 10 rounds has been played, the End Screen will then display which shows the player's total score.</p>
+							
+							
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<i>If you are interested or have some questions, you may reach me by messaging me through my socials or via my contact details</i>
+							</form>
+							<section>
+								<h3>Socials</h3>
+								<ul class="icons alt">
+									
+									
+									<li><a href="https://www.instagram.com/jpasensi/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.linkedin.com/in/john-paul-panonce/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Cebu City, Philippines</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(63) 945-340-4489</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">jpasensi13@gmail.com</a></p>
+							</section>
+							
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<!-- <ul><li>&copy; Untitled</li><li>Design: <a href="#">-</a></li></ul> -->
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
